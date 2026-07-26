@@ -1,10 +1,79 @@
-let score = 33
+//let score = null
+//let score = undefined
+//let score = true
+let score = "Raj"
 
-const {score} = req.body  // This line is trying to destructure the 'score' property from the 'req.body' object and assign it to a constant variable named 'score'. However, since 'score' is already declared as a variable using 'let', this will result in a syntax error. You cannot declare a constant with the same name as an existing variable in the same scope.
 
-console.log(typeof score);   
-console.log(typeof (score));  
+// console.log(typeof score);
+// console.log(typeof (score));
 
-let valueInNumber = Number(score)  // This line converts the 'score' variable to a number using the Number() function and assigns it to a new variable named 'valueInNumber'.
+
+let valueInNumber = Number(score)
+/*
 console.log(typeof valueInNumber);
-console.log(valueInNumber);  // This line logs the value of 'valueInNumber' to the console, which should be a number if the conversion was successful.
+console.log(valueInNumber);
+*/
+
+//"33" =>  33
+//"33bc" => NaN
+//true => 1; false => 0
+
+//let isLoggedIn = 1  //true
+//let isLoggedIn = ""    //false
+let isLoggedIn = "RAJ"  //True
+
+
+let  booleanIsLoggedIn = Boolean(isLoggedIn)
+//console.log(booleanIsLoggedIn);
+
+// 1 => true ; 0 => false
+//"" => false
+//"Raj" => true
+
+let someNumber = 33
+
+let stringNumber = String(someNumber)
+// console.log(stringNumber);
+// console.log(typeof stringNummber);
+
+//******************************* Operations ********************************************
+
+let value = 3
+let negValue = -value
+// console.log(negValue);
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(2**2);
+// console.log(2/3);
+// console.log(2%3);
+
+let str1 = "hello"
+let str2 = " Raj"
+
+let str3 = str1 +str2
+console.log(str3);
+
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log("1" + "2")
+// console.log("1" + 2 + 2);
+// console.log(1 + 2 + "2");
+
+//console.log(3 + 4 * 7 % 5);  //do not write this way
+
+// console.log(true); //true
+// console.log(+true);  //1
+// console.log(+"");  //0
+
+let num1,num2,num3
+
+num1 = num2 = num3 = 2 + 2  
+
+let gameCounnter = 100
+gameCounnter++;
+console.log(gameCounnter);
+
+//link to study
+//https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
