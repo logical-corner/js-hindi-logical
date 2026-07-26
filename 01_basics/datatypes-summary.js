@@ -38,13 +38,38 @@ const myFunction = function() {
     console.log('Hello World')
 } // Function
 
-console.log(typeof scoreValue) // number
-console.log(typeof isLoggedIn) // boolean
-console.log(typeof outsideTemp) // object
-console.log(typeof anotherId) // symbol
-console.log(typeof userEmail) // undefined
-console.log(typeof id) // symbol
-console.log(typeof bigNumber) // bigint
-console.log(typeof heros) // object
-console.log(typeof myObj) // object
-console.log(typeof myFunction) // function
+// console.log(typeof scoreValue) // number
+// console.log(typeof isLoggedIn) // boolean
+// console.log(typeof outsideTemp) // object
+// console.log(typeof anotherId) // symbol
+// console.log(typeof userEmail) // undefined
+// console.log(typeof id) // symbol
+// console.log(typeof bigNumber) // bigint
+// console.log(typeof heros) // object
+// console.log(typeof myObj) // object
+// console.log(typeof myFunction) // function
+
+// https://262.ecma-international.org/5.1/#sec-11.9.3
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack (primitives) and Heap (non-primitives) memory allocation in JavaScript  
+
+let myName = 'logical' // stored in stack memory
+
+let anotherName = myName // stored in stack memory
+anotherName = 'Raj' // stored in stack memory
+
+console.log(myName) // logical
+console.log(anotherName) // Raj
+
+let user = {
+    email: "user@example.com",
+    upid: "user@upi"
+} // stored in heap memory
+
+let admin = user // stored in stack memory
+admin.email = "admin@example.com" // modifies the object in heap memory
+
+console.log(user.email) // admin@example.com
+console.log(admin.email) // admin@example.com   
